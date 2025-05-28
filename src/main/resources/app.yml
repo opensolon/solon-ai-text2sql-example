@@ -1,0 +1,34 @@
+server.port: 8080
+
+solon.app:
+  name: 'solon-ai-text2sql'
+  group: 'solon'
+
+solon.logging:
+  appender:
+    console:
+      level: INFO
+    file:
+      level: INFO
+
+# chat模型配置
+solon.ai.chat:
+  demo:
+    apiUrl: "http://127.0.0.1:11434/api/chat"
+    provider: "ollama"
+    model: "qwen3:14b"
+
+# embedding模型配置
+solon.ai.embed:
+  demo:
+    apiUrl: "http://127.0.0.1:11434/api/embed"
+    provider: "ollama"
+    model: "bge-m3:latest"
+
+solon.dataSources:
+  db1!:
+    class: "com.zaxxer.hikari.HikariDataSource"
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/solon-ai?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: jtxx2008
