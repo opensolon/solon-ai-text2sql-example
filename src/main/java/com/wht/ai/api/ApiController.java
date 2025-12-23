@@ -3,7 +3,7 @@ package com.wht.ai.api;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
 import lombok.SneakyThrows;
-import org.noear.snack.ONode;
+import org.noear.snack4.ONode;
 import org.noear.solon.ai.chat.ChatModel;
 import org.noear.solon.ai.chat.message.SystemMessage;
 import org.noear.solon.ai.chat.message.UserMessage;
